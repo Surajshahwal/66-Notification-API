@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f6f8;
+            margin:0;
+            padding:0;
+        }
+
+        .email-container{
+            max-width:650px;
+            margin:auto;
+            background:white;
+            border-radius:8px;
+            overflow:hidden;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header{
+            background:#2c7be5;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        .header h1{
+            margin:0;
+        }
+
+        .content{
+            padding:25px;
+        }
+
+        .order-info{
+            background:#f7f9fc;
+            padding:15px;
+            border-radius:6px;
+            margin-bottom:20px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th{
+            background:#f1f1f1;
+            padding:12px;
+            text-align:left;
+            font-size:14px;
+        }
+
+        td{
+            padding:12px;
+            border-bottom:1px solid #eee;
+            font-size:14px;
+        }
+
+        .total-row{
+            font-weight:bold;
+            background:#fafafa;
+        }
+
+        .footer{
+            text-align:center;
+            font-size:13px;
+            color:#777;
+            padding:20px;
+        }
+
+        .button{
+            display:inline-block;
+            padding:12px 20px;
+            background:#28a745;
+            color:white;
+            text-decoration:none;
+            border-radius:5px;
+            margin-top:15px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="email-container">
+
+    <div class="header">
+        <h1>Order Confirmed 🎉</h1>
+        <p>Thank you for your purchase</p>
+    </div>
+
+    <div class="content">
+
+        <p>Hi <b>{{customerName}}</b>,</p>
+
+        <p>Your order has been successfully placed. Below are the details of your order.</p>
+
+        <div class="order-info">
+            <p><b>Order ID:</b> {{orderId}}</p>
+            <p><b>Order Date:</b> {{orderDate}}</p>
+            <p><b>Payment Status:</b> {{paymentStatus}}</p>
+            <p><b>Order Status:</b> {{orderStatus}}</p>
+            <p><b>Delivery Date:</b> {{deliveryDate}}</p>
+        </div>
+
+        <h3>Order Summary</h3>
+
+        <table>
+
+            <tr>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+
+            <!-- Dynamic rows -->
+            {{orderItems}}
+
+            <!-- Example
+            <tr>
+            <td>Wireless Mouse</td>
+            <td>1</td>
+            <td>$20</td>
+            <td>$20</td>
+            </tr>
+            -->
+
+            <tr class="total-row">
+                <td colspan="3">Grand Total</td>
+                <td>{{totalAmount}}</td>
+            </tr>
+
+        </table>
+
+        <center>
+            <a href="{{orderTrackingUrl}}" class="button">
+                Track Your Order
+            </a>
+        </center>
+
+    </div>
+
+    <div class="footer">
+
+        <p>If you have any questions, contact us at info@ashokit.in</p>
+
+        <p>© {{year}} Your Company. All rights reserved.</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
