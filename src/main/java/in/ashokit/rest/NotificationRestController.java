@@ -13,6 +13,11 @@ public class NotificationRestController {
 
     @Autowired
     private NotificationService notificationService;
+    //task 321
+    public void m2(){
+        String s="raju";
+        int i=10;
+    }
 
     @GetMapping("/offers-notification")
     public ResponseEntity<ApiResponse<String>> sendOfferNotification(){
