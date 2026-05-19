@@ -16,6 +16,7 @@ public class NotificationRestController {
     //task 321
     public void m2(){
         String s="raju";
+        String name="raj";
         int i=10;
     }
 
