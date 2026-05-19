@@ -37,6 +37,7 @@ public class NotificationRestController {
         int a =10;
         int b=20;
         int sum=i+j;
+        char='r';
     }
 
 }
