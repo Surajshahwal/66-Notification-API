@@ -31,5 +31,11 @@ public class NotificationRestController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+//task 320
+    public  String m1(){
+        int a =10;
+        int b=20;
+        int sum=i+j;
+    }
 
 }
