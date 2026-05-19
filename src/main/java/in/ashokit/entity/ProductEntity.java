@@ -21,7 +21,8 @@ public class ProductEntity {
     private Integer productId;
 
     @Column(name = "name")
-    private String name;
+    private String fullName;
+
 
     @Column(name = "description")
     private String description;

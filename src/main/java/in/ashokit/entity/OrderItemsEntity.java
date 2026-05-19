@@ -19,7 +19,9 @@ public class OrderItemsEntity {
     private Long orderItemId;
 
     @Column(name = "image_url", length = 1000)
-    private String imageUrl;
+    private String image;
+
+
 
     @Column(name = "unit_price", precision = 19, scale = 2)
     private BigDecimal unitPrice;
